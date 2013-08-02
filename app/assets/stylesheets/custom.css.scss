@@ -1,0 +1,162 @@
+@import "bootstrap";
+
+/*header*/
+.navbar .nav > li > a{
+  color: #D2F3FA;
+}
+
+#logo {
+  float:left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform:uppercase;
+  letter-spacing: -1px;
+  padding-top:9px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+/*Search Box*/
+#search_box{
+  margin-top:10px;
+  width: 85%;
+}
+
+.btn-small {
+  font-size:1.2em;
+  padding-top: 4px;
+  padding-left: 6px;
+}
+
+/*breadcrumb*/
+.breadcrumb li:not(:first-child) :before{
+  content: " | ";
+}
+
+/*sidebar*/
+#menu, .sidebar-nav {
+  width:22%;
+  float:left;
+  margin-right:1%
+}
+
+.row > div, .span4{
+ float:left;
+ display:inline;
+ width:71px;
+ height:38px;
+}
+
+/*main content*/
+#content {
+  float: right;
+  width:71%;
+  min-height: 500px;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/*footer*/
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #999;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 10px;
+}
+
+/* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clear-float {
+  clear: both;
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+/* form */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  //width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: #f00;
+  ul{
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+}
