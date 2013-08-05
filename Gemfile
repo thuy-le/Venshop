@@ -5,6 +5,8 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'jbuilder', '1.0.2'
+gem 'rails_12factor', '0.0.2'
 gem 'sqlite3'
 gem 'mysql2'
 gem 'bootstrap-sass', '2.3.2.0'
@@ -12,6 +14,7 @@ gem 'rspec-rails', '2.13.1'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'strong_parameters'
 gem 'rails-api', git: 'https://github.com/rails-api/rails-api.git', branch: 'master'
+gem 'turbolinks'
 
 # Gems used only for assets and not required
 # in production environments by default.

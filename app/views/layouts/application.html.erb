@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title><%= full_title(yield(:title)) %></title>
- <%= stylesheet_link_tag    "application", :media => "all",
+  <title><%= full_title(yield(:title)) %></title>
+  <%= stylesheet_link_tag    "application", :media => "all",
  "data-turbolinks-track" => true %>
- <%= javascript_include_tag "application", "data-turbolinks-track" => true  %>
- <%= csrf_meta_tags %>
- <%= render 'layouts/shim' %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true  %>
+  <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
 </head>
 <body>
- <%= render 'layouts/header' %>
+  <%= render 'layouts/header' %>
 <div class = "container" >
- <%= render 'layouts/search' %>
- <%= render 'layouts/breadcrumb' %>
-
- <div id = "content">
-   <%= yield %>
- </div>
- <div class = "clear-float"></div>
- <%= render 'layouts/footer' %>
- <%= debug(params) if Rails.env.development? %>
+  <%= render 'layouts/search' %>
+  <%= render 'layouts/breadcrumb' %>
+  <%= render 'layouts/menu' %>
+  <div id = "content">
+    <%= yield %>
+  </div>
+  <div class = "clear-float"></div>
+  <%= render 'layouts/footer' %>
+  <%= debug(params) if Rails.env.development? %>
 </div>
 </body>
 </html>
