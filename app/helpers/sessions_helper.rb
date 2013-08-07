@@ -4,12 +4,18 @@ module SessionsHelper
     remember_token = User.new_remember_token
     user.update_attribute(:remember_token, remember_token)
     cookies[:remember_token] = remember_token
+    logger.debug '------------------------------------------------------------'
+    logger.debug cookies[:remember_token]
     @current_user = user
   end
 
  #def current_user=(user)
  #   @current_user = user
  # end
+
+  def current_user?(user)
+    user == current_user
+  end
 
   def current_user
     remember_token = cookies[:remember_token]

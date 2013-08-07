@@ -14,6 +14,11 @@ gem 'rspec-rails', '2.13.1'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'strong_parameters'
 gem 'turbolinks'
+gem 'httparty'
+gem 'rest-open-uri'
+gem 'json'
+gem 'faker', '1.0.1'
+gem 'will_paginate', '3.0.3'
 
 # Gems used only for assets and not required
 # in production environments by default.

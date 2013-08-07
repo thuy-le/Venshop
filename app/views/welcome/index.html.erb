@@ -1,11 +1,33 @@
 <div class="hero-unit">
 <h2>Recommended Items</h2>
-<p></p>
-<div class = "row">
-<div class = "span4">Item place holder</div>
-<div class = "span4">Item place holder</div>
-<div class = "span4">Item place holder</div>
-<div class = "span4">Item place holder</div>
-<div class = "span4">Item place holder</div>
+<div class="row">
+  <%
+    i = 0;
+    @products.each do |product|
+      i = i+1
+%>
+  <div class = "span4">
+
+    <div class = "product_name">
+        <%= product.name %>
+    </div>
+
+    <div class = "product_img">
+      <img src = "<%= product.imgurl %>" alt=""/>
+    </div>
+
+    <div class = "product_price">
+      <%= product.price %> <%= product.currency %>
+    </div>
+
+    <div class = "product_description">
+      <%= product.description %>
+    </div>
+
+  </div>
+  <%
+    if i==20 then break
+    end
+    end %>
 </div>
 </div>

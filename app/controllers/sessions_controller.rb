@@ -6,8 +6,10 @@ class SessionsController < ApplicationController
     user = User.find_by_email(params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
       sign_in(user)
+      flash[:notice] = "Welcome, " + user.name
       redirect_to root_path
     else
+      flash[:error] = "Wrong username or password"
       render 'new'
     end
   end

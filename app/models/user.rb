@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :name, :password, :password_confirmation
+  attr_accessible :email, :name, :password, :password_confirmation, :id
   before_save { self.email = email.downcase }
   before_create :create_remember_token
   validates :name,  presence: true, length: { maximum: 50 }

@@ -12,6 +12,9 @@
 <div class = "container" >
   <%= render 'layouts/search' %>
   <%= render 'layouts/breadcrumb' %>
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash_#{name}" %>
+  <% end %>
   <%= render 'layouts/menu' %>
   <div id = "content">
     <%= yield %>

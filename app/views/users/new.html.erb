@@ -6,7 +6,7 @@
 <div class="row">
 
   <div class = "span1" >
-    <%= form_for(@user) do |f| %>
+    <%= form_for(@user, url: '/user/create') do |f| %>
       <%= render 'shared/error_messages' %>
       <%= f.label :name %>
       <%= f.text_field :name %>

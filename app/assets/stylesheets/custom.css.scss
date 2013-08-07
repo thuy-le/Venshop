@@ -44,8 +44,8 @@
 .row > div, .span4{
  float:left;
  display:inline;
- width:71px;
- height:38px;
+ width:200px;
+ height:300px;
 }
 
 /*main content*/
@@ -159,4 +159,40 @@ input {
 .field_with_errors {
   @extend .control-group;
   @extend .error;
+}
+
+.product_name {
+  font-size: .7em;
+  text-transform: uppercase;
+}
+
+.product_price {
+  font-size: .5em;
+  text-transform: uppercase;
+}
+
+.product_description {
+  font-size: .5em;
+}
+
+#flash_error {
+  border: 1px solid #750E18;
+  padding: 4px;
+  margin-bottom: 10px;
+  background-color: #cc3333;
+  color: #F7D0DD;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+#flash_notice {
+  border: 1px solid #123803;
+  padding: 4px;
+  margin-bottom: 10px;
+  background-color: #A3B15A;
+  color: #EBF7D0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
