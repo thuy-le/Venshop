@@ -4,6 +4,9 @@ require 'json'
 class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
+
+  layout "layouts/application"
+
   def index
     if(Category.count < 5)
       initialize
