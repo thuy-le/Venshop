@@ -1,13 +1,15 @@
 VenShop::Application.routes.draw do
 
-  resources :categories
+
+  resources :carts
+
   resources :users
 
   resources :products
 
 
   get 'welcome/index'
-
+  get '/categories/:id' => 'categories#show'
   get  '/signup'   =>  'users#new'
   get  '/signin'   =>  'sessions#new'
   get  '/signout'  =>  'sessions#destroy'

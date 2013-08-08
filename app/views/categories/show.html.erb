@@ -16,9 +16,9 @@
   @products.each do |product|
 %>
 
-<p><%= product.name %></p>
+<p><%= product.name %>
+<%= link_to "Add to cart", {:controller => "carts", :action => "new", :p => product.id }%> |
+<%= link_to 'View Product', product %>
+</p>
 <% end %>
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
 </div>

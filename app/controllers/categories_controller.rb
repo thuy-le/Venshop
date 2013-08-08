@@ -23,11 +23,7 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @products = Product.find_by_category_id(params[:id])
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @category }
-    end
-  end
+ end
 
   # GET /categories/new
   # GET /categories/new.json
